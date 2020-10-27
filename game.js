@@ -1,3 +1,5 @@
+createCanvas(400,400);
+
 var ball = createSprite(200,200,10,10);
 
 var player1 = createSprite(200,35,50,10);
