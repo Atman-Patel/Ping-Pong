@@ -101,11 +101,12 @@ document.addEventListener("keydown", event=>{
 function resetBall(){
     if(com.score >= 10 ){
         alert(`${user1Name} wins`)
+        location.reload()
     }
     if(user.score >= 10){
         alert(`${user2Name} wins`)
+        location.reload()
     }
-    location.reload()
     ball.x = canvas.width/2;
     ball.y = canvas.height/2;
     ball.velocityX = -ball.velocityX;
