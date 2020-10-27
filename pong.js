@@ -1,10 +1,5 @@
 // select canvas element
-const canvas = document.getElementById("pong");
 
-
-// getContext of canvas = methods and properties to draw and do a lot of thing to the canvas
-const ctx = canvas.getContext('2d');
-const user1Name = prompt("Player 1 name please keep it less than 6 characters").trim()
 if(user1Name.length >= 7 | user1Name.length == 0){
     alert(`you kept the name ${user1Name.length} characters long keep it less than 6 characters`)
     location.reload()
@@ -14,6 +9,14 @@ const user2Name = prompt("Player 2 name please keep it less than 6 characters").
 if(user2Name.length >= 7 | user2Name.length == 0){
     alert(`you kept the name ${user2Name.length} characters long keep it less than 6 characters`) && location.reload()
 }}
+
+const canvas = document.getElementById("pong");
+
+
+// getContext of canvas = methods and properties to draw and do a lot of thing to the canvas
+const ctx = canvas.getContext('2d');
+const user1Name = prompt("Player 1 name please keep it less than 6 characters").trim()
+
 
 // load sounds
 let hit = new Audio();
