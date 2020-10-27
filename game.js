@@ -1,4 +1,5 @@
 var ball = createSprite(200,200,10,10);
+
 var player1 = createSprite(200,35,50,10);
 var player2 = createSprite(200,365,50,10);
 
