@@ -5,14 +5,13 @@ const canvas = document.getElementById("pong");
 const ctx = canvas.getContext('2d');
 const user1Name = prompt("Player 1 name please keep it less than 6 characters").trim()
 if(user1Name.length >= 7){
-    alert(`you kept the name ${user1Name.length} characters long`)
+    alert(`you kept the name ${user1Name.length} characters long keep it less than 6 characters`)
     location.reload()
 }
 else{
 const user2Name = prompt("Player 2 name please keep it less than 6 characters").trim()
 if(user2Name.length >= 7){
-    alert(`you kept the name ${user2Name.length} characters long keep it less than 6 characters`)
-    location.reload()
+    alert(`you kept the name ${user2Name.length} characters long keep it less than 6 characters`) && location.reload()
 }}
 // load sounds
 let hit = new Audio();
