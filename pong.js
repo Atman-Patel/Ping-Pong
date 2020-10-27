@@ -22,8 +22,8 @@ let wall = new Audio();
 let userScore = new Audio();
 let comScore = new Audio();
 
-hit.src = "sounds/hit.mp3";
-wall.src = "sounds/wall.mp3";
+hit.src = "hit.mp3";
+wall.src = "wall.mp3";
 comScore.src = "";
 userScore.src = "";
 
