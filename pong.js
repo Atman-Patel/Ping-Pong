@@ -12,8 +12,6 @@ if(user2Name.length >= 7){
     alert(`you kept the name ${user2Name.length} characters long keep it less than 6 characters`)   
 }}
 
-location.reload()
-
 // load sounds
 let hit = new Audio();
 let wall = new Audio();
