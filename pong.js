@@ -10,7 +10,7 @@ if(user1Name.length >= 7){
 }else{
 const user2Name = prompt("Player 2 name please keep it less than 6 characters").trim()
 if(user2Name.length >= 7){
-    alert(`you kept the name ${user2Name.length} characters long`)
+    alert(`you kept the name ${user2Name.length} characters long keep it less than 6 characters`)
     location.reload()
 }}
 
@@ -236,4 +236,3 @@ let framePerSecond = 50;
 
 //call the game function 50 times every 1 Sec
 let loop = setInterval(game,1000/framePerSecond);
-
