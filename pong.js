@@ -18,7 +18,7 @@ if(user1color == "red" | user1color == "blue" |user1color == "green" |user1color
     }
 }else{
     alert(`We can't use ${user1color} sorry! so we made it our default white`)
-    user1color = "#FFDAB9" 
+    user1color = "white" 
 }
 let user2color = prompt("Pick a color from red, blue, green, pink, yellow, purple, cyan,peach for player 2").toLowerCase()
 if(user2color == "red" | user2color == "blue" |user2color == "green" |user2color == "pink"| user2color == "yellow"| user2color == "purple"|user2color == "cyan"|user2color == "peach"){
