@@ -43,13 +43,12 @@ const ctx = canvas.getContext('2d');
 // load sounds
 let hit = new Audio();
 let wall = new Audio();
-let userScore = new Audio();
+let comScore = new Audio();
 let comScore = new Audio();
 
 hit.src = "hit.mp3";
 wall.src = "wall.mp3";
 comScore.src = "comScore.mp3";
-userScore.src = "comScore.mp3";
 
 // Ball object
 const ball = {
@@ -183,7 +182,7 @@ function update(){
         resetBall();
     }else if( ball.x + ball.radius > canvas.width){
         user.score++;
-        userScore.play();
+        comScore.play();
         resetBall();
     }
     
