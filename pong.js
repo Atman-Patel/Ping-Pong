@@ -44,7 +44,6 @@ const ctx = canvas.getContext('2d');
 let hit = new Audio();
 let wall = new Audio();
 let comScore = new Audio();
-let comScore = new Audio();
 
 hit.src = "hit.mp3";
 wall.src = "wall.mp3";
