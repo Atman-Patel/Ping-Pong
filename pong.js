@@ -1,5 +1,4 @@
-// select canvas element
-
+const user1Name = prompt("Player 1 name please keep it less than 6 characters").trim()
 if(user1Name.length >= 7 | user1Name.length == 0){
     alert(`you kept the name ${user1Name.length} characters long keep it less than 6 characters`)
     location.reload()
@@ -11,12 +10,34 @@ if(user2Name.length >= 7 | user2Name.length == 0){
     location.reload()
 }}
 
+let user1color = prompt("Pick a color from red, blue, green, peach, yellow, purple, cyan for player 1").toLowerCase()
+if(user1color == "red" | user1color == "blue" |user1color == "green" |user1color == "pink"| user1color == "yellow"| user1color == "purple"|user1color == "cyan" |user1color == "peach"){
+    user1color = user1color
+    if(user1color == "peach"){
+        user1color = "#FFDAB9"
+    }
+}else{
+    alert(`We can't use ${user1color} sorry! so we made it our default white`)
+    user1color = "#FFDAB9" 
+}
+let user2color = prompt("Pick a color from red, blue, green, pink, yellow, purple, cyan,peach for player 2").toLowerCase()
+if(user2color == "red" | user2color == "blue" |user2color == "green" |user2color == "pink"| user2color == "yellow"| user2color == "purple"|user2color == "cyan"|user2color == "peach"){
+    user2color = user2color
+    if(user2color == "peach"){
+        user2color = "#FFDAB9"
+    }
+}else{
+    alert(`We can't use ${user2color} sorry! so we made it our default white`) 
+    user2color = "white"
+}
+
+
+// select canvas element
 const canvas = document.getElementById("pong");
 
 
 // getContext of canvas = methods and properties to draw and do a lot of thing to the canvas
 const ctx = canvas.getContext('2d');
-const user1Name = prompt("Player 1 name please keep it less than 6 characters").trim()
 
 
 // load sounds
@@ -27,8 +48,8 @@ let comScore = new Audio();
 
 hit.src = "hit.mp3";
 wall.src = "wall.mp3";
-comScore.src = "";
-userScore.src = "";
+comScore.src = "comScore.mp3";
+userScore.src = "comScore.mp3";
 
 // Ball object
 const ball = {
@@ -48,7 +69,7 @@ const user = {
     width : 10,
     height : 100,
     score : 0,
-    color : "yellow"
+    color : user1color
 }
 
 // COM Paddle
@@ -58,7 +79,7 @@ const com = {
     width : 10,
     height : 100,
     score : 0,
-    color : "yellow"
+    color : user2color
 }
 
 // NET
@@ -212,13 +233,13 @@ function update(){
 function render(){
     
     // clear the canvas
-    drawRect(0, 0, canvas.width, canvas.height, "#008000");
+    drawRect(0, 0, canvas.width, canvas.height, "#77b5fe");
     
     // draw the user score to the left
-    drawText("User 1~ "+user.score,canvas.width/4-100,canvas.height/5);
+    drawText("Player 1~ "+user.score,canvas.width/4-100,canvas.height/5);
     
     // draw the COM score to the right
-    drawText("User 2~ "+com.score,3*canvas.width/4-100,canvas.height/5);
+    drawText("Player 2~ "+com.score,3*canvas.width/4-100,canvas.height/5);
     
     // draw the net
     drawNet();
