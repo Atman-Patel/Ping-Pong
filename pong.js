@@ -1,10 +1,10 @@
-const user1Name = prompt("Player 1 name please keep it less than 6 characters").trim()
+const user1Name = prompt("Player 1 name").trim()
 if(user1Name.length == 0){
     alert(`you kept the name ${user1Name.length} characters long keep it less than 6 characters`)
     location.reload()
 }
 else{
-const user2Name = prompt("Player 2 name please keep it less than 6 characters").trim()
+const user2Name = prompt("Player 2 name").trim()
 if(user2Name.length == 0){
     alert(`you kept the name ${user2Name.length} characters long keep it less than 6 characters`) 
     location.reload()
