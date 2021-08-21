@@ -234,10 +234,10 @@ function render(){
     drawRect(0, 0, canvas.width, canvas.height, "#77b5fe");
     
     // draw the user score to the left
-    drawText("Player 1~ "+user.score,canvas.width/4-100,canvas.height/5);
+    drawText(`${user1Name} ~ `+user.score,canvas.width/4-100,canvas.height/5);
     
     // draw the COM score to the right
-    drawText("Player 2~ "+com.score,3*canvas.width/4-100,canvas.height/5);
+    drawText(`${user2Name} ~ `+com.score,3*canvas.width/4-100,canvas.height/5);
     
     // draw the net
     drawNet();
