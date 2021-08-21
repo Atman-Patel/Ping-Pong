@@ -125,11 +125,11 @@ document.addEventListener("keydown", event=>{
 // when COM or USER scores, we reset the ball
 function resetBall(){
     if(com.score >= 10 ){
-        alert(`${user1Name} wins`)
+        alert(`${user2Name} wins`)
         location.reload()
     }
     if(user.score >= 10){
-        alert(`${user2Name} wins`)
+        alert(`${user1Name} wins`)
         location.reload()
     }
     ball.x = canvas.width/2;
@@ -237,7 +237,7 @@ function render(){
     drawText(`${user1Name} ~ `+user.score,canvas.width/4-100,canvas.height/5);
     
     // draw the COM score to the right
-    drawText("Player 1 ~ "+com.score,3*canvas.width/4-100,canvas.height/5);
+    drawText(`${user2Name} ~ `+com.score,3*canvas.width/4-100,canvas.height/5);
     
     // draw the net
     drawNet();
