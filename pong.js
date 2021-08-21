@@ -237,7 +237,7 @@ function render(){
     drawText(`${user1Name} ~ `+user.score,canvas.width/4-100,canvas.height/5);
     
     // draw the COM score to the right
-    drawText(`${user2Name} ~ `+com.score,3*canvas.width/4-100,canvas.height/5);
+    drawText("Player 1 ~ "+com.score,3*canvas.width/4-100,canvas.height/5);
     
     // draw the net
     drawNet();
